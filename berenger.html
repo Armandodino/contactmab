@@ -42,27 +42,8 @@
 
 <script>
 function enregistrerContact() {
-  var vcard = [
-    'BEGIN:VCARD',
-    'VERSION:3.0',
-    'FN:Berenger Anzan',
-    'N:Anzan;Berenger;;;',
-    'TITLE:BUSINESS DEVELOPER & PARTNER',
-    'ORG:MAB TECH CORP',
-    'TEL;TYPE=CELL:+2250767796068',
-    'EMAIL;TYPE=INTERNET:anzanberenger@gmail.com',
-    'END:VCARD'
-  ].join('\n');
-
-  var blob = new Blob([vcard], { type: 'text/x-vcard;charset=utf-8' });
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = 'berenger-anzan.vcf';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  setTimeout(function() { URL.revokeObjectURL(url); }, 10000);
+  var vcard = 'BEGIN:VCARD%0AVERSION:3.0%0AFN:Berenger%20Anzan%0AN:Anzan;Berenger;;;%0ATITLE:BUSINESS%20DEVELOPER%20%26%20PARTNER%0AORG:MAB%20TECH%20CORP%0ATEL;TYPE=CELL:+2250767796068%0AEMAIL;TYPE=INTERNET:anzanberenger@gmail.com%0AEND:VCARD';
+  window.location.href = 'data:text/x-vcard;charset=utf-8,' + vcard;
 }
 </script>
 

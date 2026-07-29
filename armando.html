@@ -42,27 +42,8 @@
 
 <script>
 function enregistrerContact() {
-  var vcard = [
-    'BEGIN:VCARD',
-    'VERSION:3.0',
-    'FN:Armando Anzan',
-    'N:Anzan;Armando;;;',
-    'TITLE:CTO',
-    'ORG:MAB TECH CORP',
-    'TEL;TYPE=CELL:+2250707305794',
-    'EMAIL;TYPE=INTERNET:anzanarmando@gmail.com',
-    'END:VCARD'
-  ].join('\n');
-
-  var blob = new Blob([vcard], { type: 'text/x-vcard;charset=utf-8' });
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = 'armando-anzan.vcf';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  setTimeout(function() { URL.revokeObjectURL(url); }, 10000);
+  var vcard = 'BEGIN:VCARD%0AVERSION:3.0%0AFN:Armando%20Anzan%0AN:Anzan;Armando;;;%0ATITLE:CTO%0AORG:MAB%20TECH%20CORP%0ATEL;TYPE=CELL:+2250707305794%0AEMAIL;TYPE=INTERNET:anzanarmando@gmail.com%0AEND:VCARD';
+  window.location.href = 'data:text/x-vcard;charset=utf-8,' + vcard;
 }
 </script>
 

@@ -42,27 +42,8 @@
 
 <script>
 function enregistrerContact() {
-  var vcard = [
-    'BEGIN:VCARD',
-    'VERSION:3.0',
-    'FN:Marc N\'Guessan',
-    'N:N\'Guessan;Marc;;;',
-    'TITLE:CEO & AI OFFICER',
-    'ORG:MAB TECH CORP',
-    'TEL;TYPE=CELL:+2250777770326',
-    'EMAIL;TYPE=INTERNET:kouassiguymarc@gmail.com',
-    'END:VCARD'
-  ].join('\n');
-
-  var blob = new Blob([vcard], { type: 'text/x-vcard;charset=utf-8' });
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = 'marc-nguessan.vcf';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  setTimeout(function() { URL.revokeObjectURL(url); }, 10000);
+  var vcard = 'BEGIN:VCARD%0AVERSION:3.0%0AFN:Marc%20N%27Guessan%0AN:N%27Guessan;Marc;;;%0ATITLE:CEO%20%26%20AI%20OFFICER%0AORG:MAB%20TECH%20CORP%0ATEL;TYPE=CELL:+2250777770326%0AEMAIL;TYPE=INTERNET:kouassiguymarc@gmail.com%0AEND:VCARD';
+  window.location.href = 'data:text/x-vcard;charset=utf-8,' + vcard;
 }
 </script>
 
