@@ -29,23 +29,16 @@
       </div>
     </div>
 
-    <button class="btn-download" onclick="enregistrerContact()">
+    <a href="marc-nguessan.vcf" class="btn-download">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Enregistrer le contact
-    </button>
+    </a>
     <a href="index.html" class="back-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
       Retour à l'équipe
     </a>
   </div>
 </div>
-
-<script>
-function enregistrerContact() {
-  var vcard = 'BEGIN:VCARD%0AVERSION:3.0%0AFN:Marc%20N%27Guessan%0AN:N%27Guessan;Marc;;;%0ATITLE:CEO%20%26%20AI%20OFFICER%0AORG:MAB%20TECH%20CORP%0ATEL;TYPE=CELL:+2250777770326%0AEMAIL;TYPE=INTERNET:kouassiguymarc@gmail.com%0AEND:VCARD';
-  window.location.href = 'data:text/x-vcard;charset=utf-8,' + vcard;
-}
-</script>
 
 </body>
 </html>
