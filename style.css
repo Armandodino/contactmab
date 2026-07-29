@@ -258,6 +258,27 @@ header p {
   margin-bottom: 32px;
 }
 
+.member-card .qr-section {
+  margin-bottom: 24px;
+}
+
+.member-card .qr-section .qr-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.member-card .qr-section img {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  display: block;
+  margin: 0 auto;
+}
+
 .member-card .contact-info {
   margin-bottom: 28px;
 }
