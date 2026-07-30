@@ -250,6 +250,24 @@ header p {
   margin-bottom: 32px;
 }
 
+.member-card .qr-scan {
+  margin-bottom: 20px;
+}
+
+.member-card .qr-scan img {
+  width: 160px;
+  height: 160px;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.member-card .qr-scan .scan-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .member-card .contact-info {
   margin-bottom: 28px;
 }
